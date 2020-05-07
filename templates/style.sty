@@ -1,0 +1,122 @@
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage[includeheadfoot, a4paper, total={6.5in, 9.8in}, top=0.5cm]{geometry} 
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{fancyvrb}
+\usepackage{verbatim}
+\usepackage{longfbox}
+\usepackage{setspace}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{\setstretch{0.1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\includegraphics[width=4cm]{./style/logo.png}}
+
+\rfoot{\lfbox[
+  padding-top=6pt,
+  padding-left=12pt,
+  padding-right=12pt,
+  border-width=0pt,
+  border-top-width=1pt,
+]{\thepage}}
+
+\renewcommand{\headrulewidth}{1pt}
+
+\setlength{\headheight}{60pt}
+
+\setdefaultlanguage{thai}
+\setotherlanguage{english}
+\newfontfamily\thaifont[
+    Scale=1.4,
+    Path=./style/,
+    BoldFont={THSarabunNew Bold.ttf},
+    ItalicFont={THSarabunNew Italic.ttf},
+    BoldItalicFont={THSarabunNew BoldItalic.ttf}
+]{THSarabunNew.ttf}
+\newfontfamily\thaifonttt[
+    Path=./style/,
+    Scale=1.2,
+    BoldFont={Inconsolata-Bold.ttf}
+]{Inconsolata-Regular.ttf}
+\newfontfamily\englishfont[Scale=1.2]{Latin Modern Roman}
+\newfontfamily\englishfonttt[
+    Path=./style/,
+    Scale=1.2,
+    BoldFont={Inconsolata-Bold.ttf}
+]{Inconsolata-Regular.ttf}
+
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+\XeTeXlinebreaklocale "th"
+
+\newenvironment{problem}[5]
+    {
+    {\huge \textbf{#1}} 
+    
+    {\large #4, #5} \\ }
+    {}
+
+\newcommand{\InputFile}{\section*{\linespread{5.1}ข้อมูลนำเข้า}}
+\newcommand{\OutputFile}{\section*{ข้อมูลส่งออก}}
+\newcommand{\Scoring}{\section*{การให้คะแนน}}
+\newcommand{\Examples}{\section*{ตัวอย่างข้อมูลนำเข้าและข้อมูลส่งออก}}
+\newcommand{\InputFileName}{ตัวอย่างข้อมูลนำเข้า}
+\newcommand{\OutputFileName}{ตัวอย่างข้อมูลส่งออก}
+\newcommand{\Note}{\section*{คำอธิบาย}}
+\newcommand{\Source}{\section*{แหล่งที่มา}}
+% Copied from https://github.com/GassaFM/olymp.sty/blob/master/statements/olymp.sty
+
+\newlength{\thelinewidth}
+\thelinewidth=\textwidth
+\newlength{\exmpwidinf}
+\newlength{\exmpwidouf}
+\newlength{\exmpwidewid}
+\exmpwidinf=0.43\thelinewidth
+\exmpwidouf=0.43\thelinewidth
+\exmpwidewid=0.9\thelinewidth
+
+% This is magic, which delete space after verbatiminput
+\addto@hook{\every@verbatim}{\topsep=0pt\relax}
+
+\newenvironment{example}[1][]{
+
+    \ttfamily\obeylines\obeyspaces\frenchspacing
+    \newcommand{\exmp}[2]{
+        \ifdefined\NoExamples\else%
+        \begin{minipage}[t]{\exmpwidinf}\rightskip=0pt plus 1fill\relax##1\medskip\end{minipage}&
+        \begin{minipage}[t]{\exmpwidouf}\rightskip=0pt plus 1fill\relax##2\medskip\end{minipage}\\
+        \hline
+        \fi%
+    }
+
+    \newcommand{\exmpfile}[2]{
+       \ifdefined\NoExamples\else%
+       \exmp{
+          \verbatiminput{##1}
+       }{
+          \verbatiminput{##2}
+       }%
+       \fi%
+    }
+
+    \ifdefined\NoExamples\else%
+    \begin{tabular}{|l|l|}
+        \hline
+        \multicolumn{1}{|c|}{\bf\InputFileName}&
+        \multicolumn{1}{|c|}{\bf\OutputFileName}\\
+        \hline
+    \fi%
+}{
+    \ifdefined\NoExamples\else%
+    \end{tabular}
+    \fi%
+}
