@@ -23,4 +23,4 @@ jobs:
 
       - name: Copy files to S3 with the AWS CLI
         run: |
-          aws s3 sync ./statement/pdf s3://beta-programming-in-th/statements --acl public-read
+          aws s3 sync ./statements/pdf s3://beta-programming-in-th/statements --acl public-read
