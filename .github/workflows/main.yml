@@ -23,4 +23,4 @@ jobs:
 
     - name: Copy files to S3 with the AWS CLI
       run: |
-        aws s3 sync . ${{ secrets.AWS_S3_BUCKET }}/statements --exclude ".git/*" --exclude ".github/*" --exclude ".gitignore" --exclude "README.md" --acl public-read
+        aws s3 sync . s3://beta-programming-in-th/statements --exclude ".git/*" --exclude ".github/*" --exclude ".gitignore" --exclude "README.md" --acl public-read
