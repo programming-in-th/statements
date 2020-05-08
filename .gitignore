@@ -4,3 +4,5 @@
 **/*.log
 **/*.out
 **/*.fdb_latexmk
+**/__latexindent_temp.tex
+**/*.synctex.gz
