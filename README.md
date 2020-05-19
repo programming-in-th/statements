@@ -11,7 +11,7 @@ You can contribute to this repo by help us migrating current PDF file in to LaTe
 ## Pdf generator script
 
 * To generate all statements, run `./gen`
-* To gennerate specific statements, run `./gen statement1.tex statement2.tex ...`
+* To generate specific statements, run `./gen statement1.tex statement2.tex ...`
 
 In the case of generating specific statements, please beware that statement files `.tex` should be inside the folder `statements/latex`.
 
