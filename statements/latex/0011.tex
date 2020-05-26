@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Modulo}{standard input}{standard output}{1 second}{32 megabytes}
+
+กำหนดจำนวนเต็ม $A,B$ เมื่อ $A$ $modulo$ $B$ จะได้ผลลัพธ์เป็นเศษจากการหาร $A$ ด้วย $B$ ยกตัวอย่างเช่น $7 , 14 , 27 , 38$ เมื่อ $modulo$ ด้วย $3$ จะได้ผลลัพธ์เป็น $1 , 2 , 0$ และ $2$ ตามลำดับ 
+
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมรับจำนวนเต็ม $10$ ค่า จากนั้นทำการ $modulo$ จำนวนทั้งสิบด้วย $42$ และแสดงผลเป็นจำนวนแบบของเศษที่เหลือจากการ $modulo$ ด้วย $42$ ที่ไม่ซ้ำกัน
+
+\InputFile
+
+\textbf{มีบรรทัดเดียว} ข้อมูลนำเข้าจะประกอบไปด้วยจำนวนเต็มบวก $10$ จำนวน แต่ละจำนวนมีค่าน้อยกว่า $1\,000$ บรรทัดละ $1$ จำนวน
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} จำนวนแบบของเศษที่ไม่ซ้ำกัน เมื่อนำทั้ง $10$ จำนวนจากข้อมูลนำเข้ามา $modulo$ ด้วย $42$
+
+\Examples
+
+\begin{example}
+\exmp{1
+2
+3
+4
+5
+6
+7
+8
+9
+10}{10}%
+\end{example}
+\begin{example}
+\exmp{42
+84
+252
+420
+840
+126
+42
+84
+420
+126}{1}%
+\exmp{39
+40
+41
+42
+43
+44
+82
+83
+84
+85}{6}%
+\end{example}
+
+\Source
+
+Croatian Open Competition in Informatics
+
+Contest 1 – October 28, 2006
+
+\end{problem}
+
+\end{document}

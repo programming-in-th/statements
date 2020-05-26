@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{เฉพาะหรือคี่ (prime-odd)}{standard input}{standard output}{0.1 second}{16 megabytes}
+
+คุณได้รับตัวเลขมา $N$ ตัวและคุณต้องตอบว่าแต่ละตัวนั้น เป็นจำนวนเฉพาะหรือเป็นจำนวนคี่หรือไม่ นั่นคือ สำหรับแต่ละ $i$ $(1 \leq i \leq N)$ ถ้า $A[i]$ เป็นจำนวนเฉพาะหรือจำนวนคี่หรือทั้งสองอย่าง ให้ตอบ \textbf{T} ไม่เช่นนั้นให้ตอบ \textbf{F}
+
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมรับจำนวนเต็ม แล้วแสดงว่าแต่ละจำนวนที่รับมาเป็นจำนวนเฉพาะหรือจำนวนคี่หรือไม่
+
+\InputFile
+ \textbf{บรรทัดแรก} มีจำนวนเต็ม $N$ $(1 \leq N \leq 10)$ แทนจำนวนของตัวเลขที่ต้องพิจารณา
+ 
+\textbf{บรรทัดที่ $2$ ถึง $N+1$} บรรทัดที่ $i+1$ มีเลข $A[i]$ $(1 \leq A[i] \leq 10^{1\,000})$
+
+\OutputFile
+
+\textbf{มี $N$ บรรทัด} ในบรรทัดที่ $i$ แสดงคำตอบของคำถามสำหรับ $A[i]$ (\textbf{T }หรือ \textbf{F})
+
+\Examples
+
+\begin{example}
+\exmp{3
+8
+7
+15}{F
+T
+T}%
+\end{example}
+
+\Source
+
+spnautilus (ยืมเพื่อนมาอีกที)
+
+\end{problem}
+
+\end{document}

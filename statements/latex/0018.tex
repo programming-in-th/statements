@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Reseto}{standard input}{standard output}{1 second}{32 megabytes}
+
+ตระแกรงร่อนของอีราโทสเธเนส เป็นอัลกอริทึมที่ให้หาจำนวนเฉพาะจนถึงจำนวนนับ $N$ \textbf{วิธีการมีดังนี้}:
+
+\begin{enumerate}
+\item เขียนจำนวนนับตั้งแต่ \textbf{$2$ จนถึง $N$ ทั้งหมด}
+\item หาจำนวนที่\textbf{น้อยที่สุด}ที่ยังไม่ถูกขีดฆ่า และเราให้จำนวนนั้นคือ $P$\textbf{ ($P$ คือจำนวนเฉพาะ)}
+\item ขีดฆ่าจำนวนที่เป็นพหุคูณของ $P$ \textbf{ทุกตัวที่ยังไม่ถูกขีดค่า}
+\item ถ้ายังคงมีจำนวนนับที่ยังไม่ถูกขีดฆ่า ให้กลับไปทำขั้นตอนที่ 2
+\end{enumerate}
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมที่รับจำนวนเต็ม $N, K$ ให้หาว่าจำนวนตัวที่ $K$ ที่ถูกขีดฆ่าคือจำนวนใด
+
+\InputFile
+
+\textbf{มีบรรทัดเดียว} รับจำนวนเต็ม $N$ และ $K$ โดยที่ $(2 \leq K < N \leq 1\,000)$
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} จำนวนเต็มลำดับที่ $K$ ที่ถูกขีดฆ่านับแต่เริ่มต้นอัลกอริทึม
+
+\Examples
+
+\begin{example}
+\exmp{7 3}{6}%
+\exmp{15 12}{7}%
+\exmp{10 7}{9}%
+\end{example}
+
+\Note
+
+\underline{\textbf{อธิบายตัวอย่างที่สาม}}
+
+ลำดับจำนวนตัวเลขที่ถูกขีดฆ่าคือ $2, 4, 6, 8, 10, 3, 9, 5$ และ $7$ \underline{และจำนวนที่ $7$ \textbf{ที่}}\textbf{ถู}\underline{\textbf{กขีดฆ่าคือ $9$}}
+
+\Source
+
+COCI 2008/2009, Contest \#2 – November 15, 2008
+
+
+
+\end{problem}
+
+\end{document}

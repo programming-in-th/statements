@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Segment Tree}{standard input}{standard output}{1 second}{64 megabytes}
+
+คุณเป็นคน ๆหนึ่งที่ต้องการฝึกเขียน \textit{Segment Tree} คุณจึงมาทำโจทย์ข้อนี้
+
+
+\bigskip
+\underline{\textbf{โจทย์}}  กำหนดอาเรย์ $N$ ช่อง (ทุกช่องมีค่าเริ่มต้นเป็น $0$) และกำหนดคำสั่ง $Q$ คำสั่งซึ่งมีทั้งสิ้น $2$ ชนิด ดังนี้
+\begin{itemize}
+
+\item เปลี่ยนค่าอาเรย์ช่องที่ $i$ ให้มีค่าเท่ากับ $Z$
+\item หาค่า \textit{max} ของตัวเลขทุกตัวระหว่างช่อง $A$ ถึง $B$
+
+\end{itemize}
+\InputFile
+
+\textbf{บรรทัดแรก} รับจำนวนเต็ม $N$ และ $Q$ แทนจำนวนช่องของอาเรย์และจำนวนคำสั่ง $(1 \leq N, Q \leq 262\,144)$
+
+\textbf{บรรทัดที่ $2$ ถึง $Q+1$ }แต่ละบรรทัดจะประกอบด้วยคำสั่งหนึ่งคำสั่ง ที่เป็นไปได้ $2$ ลักษณะ ดังนี้
+\begin{itemize}
+
+\item U $i$ $Z$ : เปลี่ยนค่าอาเรย์ช่องที่ $i$ ให้มีค่าเท่ากับ $Z$ $(1 \leq i \leq N;  -10^9 \leq Z \leq 10^9)$
+\item P $A$ $B$ : แสดงผลค่าที่มากที่สุดของเลขในอาเรย์ช่องที่ $A, A+1, A+2, … , B$ $(1 \leq A \leq B \leq N)$
+
+
+\end{itemize}
+\OutputFile
+
+\textbf{มี $K$ บรรทัด เมื่อ $K$ คือจำนวนของคำสั่ง “P”} ในบรรทัดที่ $i$ ให้แสดงจำนวน $1$ จำนวน แทนคำตอบของคำถามครั้งที่ $i$
+
+\Examples
+
+\begin{example}
+\exmp{5 4
+U 1 -14
+U 1 -1
+P 2 2
+P 3 5}{0
+0}%
+\exmp{6 7
+U 5 280
+U 1 7
+P 1 2
+P 3 5
+U 4 -873760809
+U 2 -392
+P 1 1}{7
+280
+7}%
+\end{example}
+
+
+\Source
+
+Programming.in.th ( PS.int )
+
+\end{problem}
+
+\end{document}

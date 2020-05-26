@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Okviri}{standard input}{standard output}{1 second}{32 megabytes}
+
+\textit{Peter Pan frames} เป็นวิธีการตกแต่งตัวอักษร ด้วยการนำตัวอักษรแต่ละตัวมาล้อมกรอบด้วยกรอบรูปข้าวหลามตัด (Diamond shaped frame) แต่ละกรอบที่อยู่ข้างๆกัน จะมีส่วนที่ซ้อนทับกันอยู่
+
+ตัวอย่างของ \textit{Peter Pan frame} สำหรับ $1$ ตัวอักษรเป็นดังนี้ (\textit{Peter Pan frame} ล้อมตัวอักษร X)
+
+..\#..
+
+.\#.\#.
+
+\#.X.\#
+
+.\#.\#.
+
+..\#..
+
+แต่อย่างไรก็ตาม เราต้องการให้การตกแต่งออกมาดูอลังการมากที่สุด เราจะตกแต่ง\textbf{กรอบที่เป็นพหุคูณของ $3$} โดยใช้ \textit{Wendy frames} แทนการตกแต่งแบบ \textit{Peter Pan frames}
+
+ตัวอย่างของ \textit{Wendy frame} สำหรับ $1$ ตัวอักษร เป็นดังนี้ (\textit{Wendy frame }ล้อมตัวอักษร X)
+
+..*..
+
+.*.*.
+
+*.X.*
+
+.*.*.
+
+..*..
+
+
+เมื่อไรก็ตามที่ \textit{Wendy frame} เกิดการซ้อนทับกับ \textit{Peter Pan frame} , \textit{Wendy frame} ที่ดูสวยกว่าจะถูกนำมาไว้ด้านหน้า สำหรับตัวอย่างของการซ้อนทับให้คุณดูได้จากตัวอย่างข้อมูลส่งออก
+
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมรับอักษรภาษาอังกฤษตัวพิมพ์ใหญ่ แล้วแสดงผลเป็นคำที่ได้รับการตกแต่งแล้วตามเงื่อนไขที่ได้กล่าวมา
+
+\InputFile
+
+\textbf{มีบรรทัดเดียว} บรรทัดแรกของข้อมูลนำเข้า จะประกอบไปด้วยตัวอักษรภาษาอังกฤษตัวพิมพ์ใหญ่ ไม่เกิน $15$ ตัวอักษร
+
+\OutputFile
+
+\textbf{มีทั้งหมดห้าบรรทัด} แสดงคำที่ถูกตกแต่งด้วย \textit{Peter Pan frame} และ \textit{Wendy frame}
+
+\Examples
+
+\begin{example}
+\exmp{A}{..\#..
+.\#.\#.
+\#.A.\#
+.\#.\#.
+..\#..}%
+\exmp{DOG}{	..\#...\#...*..
+.\#.\#.\#.\#.*.*.
+\#.D.\#.O.*.G.*
+.\#.\#.\#.\#.*.*.
+..\#...\#...*..}%
+\exmp{ABCD}{..\#...\#...*...\#..
+.\#.\#.\#.\#.*.*.\#.\#.
+\#.A.\#.B.*.C.*.D.\#
+.\#.\#.\#.\#.*.*.\#.\#.
+..\#...\#...*...\#..}%
+\end{example}
+
+\Source
+
+Croatian Open Competition in Informatics
+
+Contest 1 – October 28, 2006
+
+\end{problem}
+
+\end{document}

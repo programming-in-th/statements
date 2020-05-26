@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Word Chain}{standard input}{standard output}{1 second}{64 megabytes}
+
+\textbf{โซ่คำ} คือลำดับของคำที่มีจำนวนอักขระเท่ากันและแต่ละคำที่มีลำดับติดกันจะต้องมีตำแหน่งที่มีตัวอักขระต่างกันไม่เกินสองตำแหน่ง เช่น HEAD และ HEAP จะต่างกันตำแหน่งเดียวคือ D และ P ในตำแหน่งตัวอักขระที่ 4 ของคำ ในขณะที่ REAR กับ BAER จะมีตำแหน่งต่างกัน 3 ตำแหน่ง คือ ตำแหน่งที่ 1 (R กับ B) ตำแหน่งที่ 2 (E และ A) และ ตำแหน่งที่ 3 (A และ E)
+
+\textbf{ตัวอย่างของโซ่คำที่ต่อเนื่อง}ได้แก่ HEAD HEAP LEAP TEAR REAR และ EGG EAG GAE GAP TAP TIN
+
+\textbf{ตัวอย่างของโซ่คำที่ขาด}ได้แก่ LEAP TEAR REAR BAER BAET BEEP ซึ่งจะขาดที่คำว่า BAER
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมรับชุดของโซ่คำมาชุดหนึ่ง แล้วแสดงผลเป็น\textbf{คำสุดท้ายในโซ่คำ }ก่อนที่โซ่คำจะขาด
+
+\InputFile
+\textbf{บรรทัดแรก} เก็บจำนวนเต็ม $L$ แทนจำนวนตัวอักษรของแต่ละคำ โดยที่ $3 \leq L \leq 1\,000$
+
+\textbf{บรรทัดที่สอง} เก็บจำนวนเต็ม $N$ แทนจำนวนคำทั้งหมดในแฟ้มข้อมูล โดยที่ $1 \leq N \leq 30\,000$
+
+\textbf{บรรทัดที่ $3$ ถึง $N +2$} เก็บลำดับของคำที่มีจำนวนตัวอักขระ $L$ ตัว แต่ละบรรทัดเก็บคำที่เขียนด้วยตัวอักษร \\ (‘A’ ถึง ‘Z’ ) ที่เป็นตัวพิมพ์ใหญ่
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} แสดงผลเป็นคำสุดท้ายของโซ่คำ
+
+\Examples
+
+\begin{example}
+\exmp{4
+12
+HEAD 
+HEAP 
+LEAP 
+TEAR 
+REAR
+BAER
+BAET
+BEEP
+JEEP
+JOIP
+JEIP
+AEIO}{REAR}%
+\end{example}
+
+\Source
+
+การแข่งขันคอมพิวเตอร์โอลิมปิก สอวน. ครั้งที่ 1 มหาวิทยาลัยเกษตรศาสตร์
+
+\end{problem}
+
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Find the Distance}{standard input}{standard output}{1 second}{64 megabytes}
+
+ถ้ามีเลขฐานสอง $2$ จำนวนซึ่งมีจำนวนหลักเท่ากันแล้ว \textit{Hamming distance} ของเลขสองจำนวนนี้ หาได้จาก จำนวนหลักที่มีเลขต่างกัน ตัวอย่างเช่น
+
+$010010$\\
+และ\\
+$100010$
+
+มี\textit{ Hamming distance} เป็น $2$ เนื่องจากหลักทางซ้ายสุด $2$ หลักแรกแตกต่างกัน 
+\bigskip
+
+อีกตัวอย่างหนึ่งคือ
+
+$0111110$\\
+และ\\
+$0011100$
+
+ก็จะมี \textit{Hamming distance} เป็น $2$ เช่นกัน
+
+\bigskip
+ถ้าพิจารณาเลขฐานสองที่มี $K$ หลัก และกำหนดให้ $N$ เป็นเลขจำนวนเต็มโดยที่ $N \leq 2^k-1$ แล้ว หน้าที่ของคุณคือให้หาผลรวมของ \textit{Hamming distance} ของค่า $0$ และ $1$, $1$ และ $2$, เรื่อยไปจนถึงระหว่าง $N-1$ และ $N$
+
+ตัวอย่างเช่น ถ้า $K=3$ และ $N=4$ แล้วคำตอบคือ $7$ ซึ่งได้มาจากการหา \textit{Hamming distance} ดังนี้
+
+$000$ และ $001$ (หรือจาก $0$ และ $1$ เมื่อเขียนเป็นเลขฐานสอง) มี \textit{Hamming distance} เป็น $1$\\
+$001$ และ $010$ มี \textit{Hamming distance} เป็น $2$\\
+$010$ และ $011$ มี \textit{Hamming distance} เป็น $1$\\
+$011$ และ $100$ มี \textit{Hamming distance} เป็น $3$
+
+ดังนั้นผลรวมของ \textit{Hamming distance} คือ $1+2+1+3 = 7$ นั่นเอง
+
+\bigskip
+\underline{\textbf{โจทย์}}  คุณจะได้รับค่า $K$ และ $N$ หน้าที่ของคุณคือต้องหาผลรวมของ\textit{ Hamming distance} ของเลขฐานสอง $K$ หลัก ระหว่างค่า $0$ และ $1$, $1$ และ $2$, $...$, $N-1$ และ $N$
+
+\InputFile
+
+\textbf{มีบรรทัดเดียว} รับจำนวนเต็มสองจำนวน $K$ $N$ $( K \leq 32; N \leq 2^{32}-1)$
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} แสดงค่าผลรวมของ \textit{Hamming distance} ดังได้อธิบายไปแล้ว
+
+\Examples
+
+\begin{example}
+\exmp{3 4}{7}%
+\end{example}
+
+
+\Source
+
+Indian National Olympiad in Informatics
+Online Programming Contest, 24-25 December 2005
+
+\end{problem}
+
+\end{document}

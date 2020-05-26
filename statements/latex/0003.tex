@@ -1,0 +1,46 @@
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Matrix Addition}{standard input}{standard output}{1 second}{64 megabytes}
+
+\underline{\textbf{โจทย์}} บวกเมทริกซ์ 2 เมทริกซ์ มิติ $m \times n$ จากที่โจทย์ระบุให้
+
+\InputFile
+
+\textbf{บรรทัดแรก} จำนวนเต็มบวก $m , n $ $(1 \leq m , n \leq 100)$ แสดงมิติของเมทริกซ์
+
+\textbf{บรรทัดที่ $2$ ถึงบรรทัดที่ $m + 1$} จำนวนเต็ม n จำนวนในแต่ละบรรทัด แสดงสมาชิกของเมทริกซ์ที่หนึ่ง
+
+\textbf{บรรทัดที่ $m + 2$ ถึงบรรทัดที่ $2 \cdot m + 1$} จำนวนเต็ม n จำนวนในแต่ละบรรทัด แสดงสมาชิกของเมทริกซ์ที่สอง คุณสามารถสมมติได้ว่าสมาชิกของเมทริกซ์แต่ละตัวนั้น มีค่าไม่ต่ำกว่า $-2\,000\,000\,000$ และไม่เกิน $2\,000\,000\,000$
+
+\OutputFile
+
+\textbf{จำนวนบรรทัดทั้งสิ้น $m$ บรรทัด} แต่ละบรรทัดแสดงสมาชิกของเมทริกซ์ผลลัพธ์ ในรูปแบบตามข้อมูลนำเข้า
+
+\Examples
+
+\begin{example}
+\exmp{3 3
+1 2 3
+3 2 1
+1 3 2
+1 1 1
+1 1 1
+1 1 1
+}{2 3 4
+4 3 2
+2 4 3
+}%
+\end{example}
+
+\Source
+
+Programming.in.th (Northern series)
+
+\end{problem}
+
+\end{document}

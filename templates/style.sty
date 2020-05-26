@@ -14,6 +14,10 @@
 \usepackage{longfbox}
 \usepackage{setspace}
 \usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{xcolor,colortbl}
 \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{\setstretch{0.1}}
 
 \pagestyle{fancy}
@@ -52,6 +56,7 @@
     BoldFont={Inconsolata-Bold.ttf}
 ]{Inconsolata-Regular.ttf}
 
+\setstretch{1.2}
 \setlength{\parskip}{10pt}
 \setlength{\parindent}{0pt}
 
@@ -64,6 +69,13 @@
     
     {\large #4, #5} \\ }
     {}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue
+}
 
 \newcommand{\InputFile}{\section*{\linespread{5.1}ข้อมูลนำเข้า}}
 \newcommand{\OutputFile}{\section*{ข้อมูลส่งออก}}
@@ -112,7 +124,7 @@
     \begin{tabular}{|l|l|}
         \hline
         \multicolumn{1}{|c|}{\bf\InputFileName}&
-        \multicolumn{1}{|c|}{\bf\OutputFileName}\\
+        \multicolumn{1}{  c|}{\bf\OutputFileName}\\
         \hline
     \fi%
 }{

@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Kemija}{standard input}{standard output}{1 second}{32 megabytes}
+
+ลูก้าเริ่มงี่เง่ากับคาบเคมีอีกแล้ว.. แทนที่เขาจะดุลสมการเคมี เขากลับมานั่งเข้ารหัสข้อความบนกระดาษของเขา
+
+โดยเขาจะเปลี่ยนทุกตัวสระ (a, e, i, o, u) โดยเขียนด้วยสระตัวนั้นก่อน ตามด้วยตัวอักษร ‘p’ แล้วตามด้วยสระตัวเดิมนั้นอีกครั้ง
+
+ตัวอย่างเช่น คำว่า “kemija” (แปลว่าเคมี) จะกลายเป็น “kepemipijapa”
+และคำว่า “paprika” จะกลายเป็น “papapripikapa”
+
+แต่คุณครูก็มาหาเขาและยึดกระดาษที่เขียนข้อความที่เข้ารหัสแล้ว และต้องการที่จะถอดหาข้อความเดิมออกมา
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมที่รับข้อความที่เข้ารหัสของลูก้า และพิมพ์ข้อความก่อนเข้ารหัสออกมา
+
+\InputFile
+
+\textbf{มีบรรทัดเดียว} เป็นข้อความที่เข้ารหัสแล้ว ข้อความจะประกอบด้วย ตัวอักษร a$-$z ตัวเล็ก และ ช่องว่าง โดยจะไม่มีช่องว่างที่หัวหรือท้ายข้อความ จำนวนตัวอักษรทั้งหมดจะไม่เกิน $100$ ตัวอักษร
+
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} แสดงเป็นข้อความก่อนที่ลูก้าจะเข้ารหัส
+
+\Examples
+
+\begin{example}
+\exmp{zepelepenapa papapripikapa}{zelena paprika}%
+\exmp{bapas jepe doposapadnapa opovapa kepemipijapa}{bas je dosadna ova kemija}%
+\end{example}
+
+
+\Source
+
+COCI 2008/2009, Contest \#3 – December 13, 2008
+
+
+
+\end{problem}
+
+\end{document}

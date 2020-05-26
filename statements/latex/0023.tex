@@ -1,0 +1,33 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{DATUM}{standard input}{standard output}{1 second}{32 megabytes}
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมเพื่อรับวันที่ต่าง ๆ ในปี 2009 แล้วคำนวณหาวันในสัปดาห์ที่ตรงกับวันที่นั้น ๆ ออกมา
+
+\InputFile
+
+\textbf{มีบรรทัดเดียว} ประกอบด้วยเลขจำนวนเต็มบวก $2$ ค่า คือ $D$ และ $M$ ซึ่งแยกกันด้วยช่องว่าง โดยเลขทั้งสองนั้นจะต้องเป็นวันที่ที่มีอยู่จริงของปี 2009
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} ให้แสดงผลวันในสัปดาห์ที่ตรงกับวันที่ $D$ เดือน $M$ ในปี 2009 ที่รับเข้ามา โดยข้อมูลส่งออกจะต้องเป็น "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" หรือ "Sunday"
+
+\Examples
+
+\begin{example}
+\exmp{1 1}{Thursday}%
+\exmp{17 1}{Saturday}%
+\exmp{25 9}{Friday}%
+\end{example}
+
+\Source
+
+COCI 2008/2009, Contest \#4 – January 17, 2009
+
+\end{problem}
+
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Toppykung}{standard input}{standard output}{1 second}{64 megabytes}
+
+  อ้วน กฤติศักดิ์ ไชยกุล (นามสมมติ) ต้องการจะลดน้ำหนักของเขา เนื่องจากเขามีน้ำหนักเยอะเกินขนาดและมีพุงที่ใหญ่ยื่นยาวจนกระทั่งปิดเข็มขัด เขาได้คิดวิธีการลดน้ำหนักแบบใหม่คือการเล่นมุกแป๊กๆเพื่อจะได้ใช้พลังงานจากการพูดสิ่งไร้สาระออกมา
+
+                ด้วยเหตุนี้จึงทำให้ในแต่ละวัน อ้วนจะเล่นมุกแป๊กออกมาจำนวนหลายมุกมาก(บ้างก็เป็นมุกซ้ำที่เคยเล่นแล้ว) เขาจึงต้องการจดบันทึกมุกของเขาให้เป็นระเบียบด้วยการเรียงมุกทั้งหมด\textbf{ตามลำดับตัวอักษร Dictionary โดยจะไม่จดบันทึกมุกซ้ำหลายครั้ง}
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมรับมุขทั้งหมดของอ้วน แล้วแสดงมุขทั้งหมดที่ถูกจดบันทึกไว้ตามเงื่อนไขของโจทย์
+
+\InputFile
+\textbf{บรรทัดแรก} จำนวนนับ $N$ $( 1 < N < 1\,000 )$ แทนจำนวนของมุกที่อ้วนเล่นในวันนี้
+\textbf{บรรทัดที่ $2$ ถึง $N+1$} แต่ละบรรทัดประกอบด้วยสตริง $1$ สตริงยาวไม่เกิน $30$ ตัวอักษร ประกอบด้วยตัวอักษรพิมพ์เล็กเท่านั้น
+
+\OutputFile
+
+\textbf{มีหลายบรรทัด} แต่ละบรรทัดแสดงสตริงมุกที่อ้วนเล่น เรียงตามลำดับตัวอักษร โดยจะไม่แสดงมุกเดิมซ้ำ
+
+\Examples
+
+\begin{example}
+\exmp{4
+toppykung
+krittisakchaiyakul
+noob
+nakornpathom}{krittisakchaiyakul
+nakornpathom
+noob
+toppykung}%
+\exmp{6
+mai
+hen
+longsob
+ma
+pid
+sala}{hen
+longsob
+ma
+mai
+pid
+sala}%
+\exmp{6
+maidai
+leoi
+maidai
+tong
+maidai
+nakornpathom}{leoi
+maidai
+nakornpathom
+tong}%
+\end{example}
+
+
+\Source
+
+Programming.in.th (PS.int)
+
+แรงบันดาลใจ : \href{https://www.facebook.com/profile.php?id=1591374837}{https://www.facebook.com/profile.php?id=1591374837}
+
+\end{problem}
+
+\end{document}

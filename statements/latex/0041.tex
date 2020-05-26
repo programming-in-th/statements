@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{บรรจุวงกลม (circle-packing)}{standard input}{standard output}{0.1 second}{16 megabytes}
+
+คุณต้องการบรรจุวงกลมตันรัศมี $1$ หน่วยจำนวน $N$ วง เข้าไปในสี่เหลี่ยมขนาด $4 \times K$ โดยที่วงกลมทุกวงต้องไม่พ้นออกมานอกขอบสี่เหลี่ยม และวงกลมแต่ละคู่ต้องไม่ทับกัน (แต่สามารถแตะกันได้) ถามว่า $K$ ที่น้อยที่สุดที่เป็นไปได้มีค่าเท่าไหร่
+
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมรับจำนวนวงกลม แล้วแสดงขนาดสี่เหลี่ยมที่เล็กที่สุดที่บรรจุวงกลมจำนวนดังกล่าวไว้ได้หมด
+
+\InputFile
+ \textbf{มีบรรทัดเดียว} ระบุจำนวนเต็ม $N$ $(1 \leq N \leq 15)$ แทนจำนวนวงกลม
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} ระบุจำนวนจริง $K$ โดยให้พิมพ์ทศนิยม $6$ ตำแหน่งพอดี
+
+\Examples
+
+\begin{example}
+\exmp{2}{2.000000}%
+\exmp{7}{7.464102}%
+\end{example}
+
+\Source
+
+spnautilus
+
+\end{problem}
+
+\end{document}

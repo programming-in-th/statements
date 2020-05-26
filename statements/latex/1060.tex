@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+
+\begin{document}
+
+\begin{problem}{Cromartie Mountain}{standard input}{standard output}{1 second}{64 megabytes}
+
+นักสำรวจได้สำรวจเทือกเขาคุโรมาตี้ ซึ่งทอดยาวเป็นเส้นตรง และประกอบด้วยภูเขารูปสามเหลี่ยมหน้าจั่วจำนวน $N$ ลูก แล้วจดบันทึกเฉพาะ ตำแหน่งเริ่มต้น $S$ และความสูงของภูเขา $H$ แต่ละลูกเอาไว้ ภูเขาแต่ละลูกประกอบด้วยสัญลักษณ์ เนินเขา (\textbf{‘/’} หรือ \textbf{‘\textbackslash’}) และพื้นที่ป่าไม้ (\textbf{‘X’}) โดยที่รูปของภูเขาสัมพันธ์กับความสูง ดังตัวอย่าง
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{ตารางที่ 1 แสดงตัวอย่างความสัมพันธ์ระหว่างรูป}\\
+\multicolumn{5}{|c|}{กับความสูงของภูเขาแต่ละระดับ $H = 1 … 5$}\\
+\hline \hline
+& & & &/\textbackslash \\
+& & & /\textbackslash & /XX\textbackslash\\
+& & /\textbackslash & /XX\textbackslash & /XXXX\textbackslash\\
+& /\textbackslash & /XX\textbackslash & /XXXX\textbackslash &/XXXXXX\textbackslash\\
+/\textbackslash & /XX\textbackslash & /XXXX\textbackslash & /XXXXXX\textbackslash & /XXXXXXXX\textbackslash \\
+\hline
+$H = 1$ & $H = 2$ & $H = 3$ & $H = 4$ & $H = 5$ \\
+\hline
+\end{tabular}
+\end{center}
+
+สังเกตว่า เมื่อ $H=1$ จะมีเฉพาะยอดเขาเท่านั้น ไม่มีพื้นที่ป่าไม้
+
+\bigskip
+\underline{\textbf{โจทย์}}  จากบันทึกของนักสำรวจ จงเขียนโปรแกรมวาดรูปเทือกเขาคุโรมาตี้ โดยมีเงื่อนไขต่อไปนี้
+\begin{itemize}
+\item ไม่มีภูเขาลูกใด ถูกภูเขาอื่นบังมิดทั้งลูก (จำนวนของยอดเขาที่ปรากฏต้องเท่ากับจำนวนของภูเขาที่บันทึกไว้)
+\item ตำแหน่งที่ เนินเขา (‘\textbackslash’ และ ‘/’) ของภูเขาสองลูกเหลื่อมกันให้แทนด้วยตัวอักษรวีพิมพ์เล็ก (‘v’)
+\item ตำแหน่งที่ เนินเขา ของภูเขาลูกหนึ่ง เหลื่อมกับพื้นที่ป่าไม้ของภูเขาอีกลูกหนึ่งให้ถือว่าเป็นพื้นที่ป่าไม้ ให้แทนด้วยตัวอักษรเอ็กซ์พิมพ์ใหญ่ (‘X’)
+\item ในการแสดงผลลัพธ์ สำหรับพื้นที่ว่างให้แสดงด้วยเครื่องหมายจุด (‘.’) เท่านั้น
+\end{itemize}
+
+\newpage
+\textbf{ตัวอย่างเช่น} มีภูเขา $3$ ลูก ซึ่งมีค่า $(S, H)$ เป็นดังนี้ $(4, 6)$ $(1, 4)$ $(15, 3)$ จะสามารถแสดงเป็นเทือกเขาได้ดังนี้
+
+\begin{tabular}{c}\ttfamily
+......../\textbackslash..........\\\ttfamily
+
+......./XX\textbackslash.........\\\ttfamily
+
+.../\textbackslash./XXXX\textbackslash........\\\ttfamily
+
+../XXvXXXXXX\textbackslash.../\textbackslash..\\\ttfamily
+
+./XXXXXXXXXXX\textbackslash./XX\textbackslash.\\\ttfamily
+
+/XXXXXXXXXXXXXvXXXX\textbackslash\\
+\end{tabular}
+
+\InputFile
+
+\textbf{บรรทัดแรก} รับค่า $N$ แทนจำนวนของภูเขาที่นักสำรวจบันทึกไว้ $(1 \leq N \leq 21)$ 
+
+\textbf{บรรทัดที่ $2$ ถึง $N+1$} ในบรรทัดที่ $i+1$ ให้รับข้อมูลของภูเขาลูกที่ $i$ โดยแสดงตำแหน่งเริ่มต้น $S$ และความสูงของภูเขา $H$ ของภูเขาลูกที่ $i$ คั่นด้วยช่องว่าง $(1 \leq S \leq 60;1 \leq H \leq 10)$ 
+
+\OutputFile
+
+\textbf{มีหลายบรรทัด} แสดงรูปของเทือกเขาคุโรมาตี้ โดยความสูงของรูปเท่ากับความสูงของยอดเขาที่สูงที่สุด ตัวอักษรซ้ายสุดของรูปตรงกับตำแหน่ง $S = 1$ และขอบด้านขวาสุดต้องเป็นส่วนหนึ่งของภูเขาอย่างน้อย $1$ ลูก
+
+\Examples
+
+\begin{tabular}{|l|l|}
+        \hline
+        \multicolumn{1}{|c|}{\bf\InputFileName}&
+        \multicolumn{1}{c|}{\bf\OutputFileName}\\
+        \hline
+        
+        \begin{tabular}{l}
+        \ttfamily 3\\
+		\ttfamily5 6\\
+		\ttfamily2 4\\
+		\ttfamily16 3\\
+        \end{tabular} &
+        
+        \begin{tabular}{l}
+        \\
+        \ttfamily........./\textbackslash..........\\
+		\ttfamily......../XX\textbackslash.........\\
+		\ttfamily..../\textbackslash./XXXX\textbackslash........\\
+		\ttfamily.../XXvXXXXXX\textbackslash.../\textbackslash..\\
+		\ttfamily../XXXXXXXXXXX\textbackslash./XX\textbackslash.\\
+		\ttfamily./XXXXXXXXXXXXXvXXXX\textbackslash
+        \end{tabular} \\[9ex]
+        \hline
+        
+\end{tabular}    
+
+\begin{tabular}{|l|l|}
+        \hline
+        \multicolumn{1}{|c|}{\bf\InputFileName}&
+        \multicolumn{1}{c|}{\bf\OutputFileName}\\
+        \hline        
+         
+         \begin{tabular}{l}
+	    \ttfamily 5\\
+		\ttfamily1 4\\
+		\ttfamily6 7\\
+		\ttfamily12 6\\
+		\ttfamily21 5\\
+		\ttfamily41 3\\
+        \end{tabular} &
+        \begin{tabular}{l}
+       \\
+        \ttfamily.........../\textbackslash.................................\\
+	\ttfamily	........../XX\textbackslash../\textbackslash............................\\
+	\ttfamily	........./XXXX\textbackslash/XX\textbackslash...../\textbackslash....................\\
+	\ttfamily	.../\textbackslash.../XXXXXXXXXX\textbackslash.../XX\textbackslash...................\\
+	\ttfamily	../XX\textbackslash./XXXXXXXXXXXX\textbackslash./XXXX\textbackslash............../\textbackslash..\\
+	\ttfamily	./XXXXvXXXXXXXXXXXXXXvXXXXXX\textbackslash............/XX\textbackslash.\\
+	\ttfamily	/XXXXXXXXXXXXXXXXXXXXXXXXXXXX\textbackslash........../XXXX\textbackslash\\
+    \\
+        \end{tabular} \\[9ex]
+        
+        \hline
+\end{tabular}
+
+
+\end{problem}
+
+\end{document}

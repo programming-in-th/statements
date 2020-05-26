@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Floating-Point Trick}{standard input}{standard output}{0.1 second}{8 megabytes}
+
+
+\underline{\textbf{โจทย์}} จงเขียนโปรแกรมคำนวณ $2^N$ สำหรับจำนวนเต็มไม่ติดลบ $N$ ใด ๆ
+
+\InputFile
+\textbf{บรรทัดแรก} ระบุจำนวนเต็ม $Q$ แทนจำนวนคำถาม $(1 \leq Q \leq 20)$
+
+\textbf{บรรทัดที่ $2$ ถึง $Q+1$} แต่ละบรรทัดระบุจำนวนเต็ม $N_i$ $(0 \leq N_i \leq 214)$
+
+\OutputFile
+
+\textbf{มี $Q$ บรรทัด} โดยบรรทัดที่ $i$ $(1 \leq i \leq Q)$ ระบุคำตอบ $2^{N_i}$
+
+\Examples
+
+\begin{example}
+\exmp{3
+2
+11
+20}{4
+2048
+1048576}%
+\end{example}
+
+\Source
+
+spnautilus
+
+\end{problem}
+
+\end{document}

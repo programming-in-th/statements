@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{The World R:2}{standard input}{standard output}{3 second}{128 megabytes}
+
+ ในเกมออนไลน์ชื่อดังหนึ่งบน Oprrating System นามว่า\textit{ Altimit Mine OS} เป็นเกมที่มีคนเล่นมากที่สุดในช่วงปี 2016 ด้วยระบบเกมที่เป็น Virtual Reality เสมือนจริงมากที่สุดเกมหนึ่ง เนื่องด้วยมีจำนวนผู้เล่นอันมหาศาล ทำให้ต้องมีการแบ่ง \textit{Server} ออกเป็น $4$ \textit{Server} อันได้แก่
+\begin{itemize}
+
+\item $\Delta$ \textit{Delta}
+\item $\Omega$ \textit{Omega}
+\item $\theta$ \textit{Theta}
+\item $\Sigma$ \textit{Sigma}
+\end{itemize}
+
+ ในแต่ละ \textit{Server} จะมี\textit{เมืองราก  (Root Town)} เปรียบเสมือนจุดรวมความเจริญ (ดูชื่อ\textit{เมืองราก}ของแต่ละ\textit{เซิร์ฟเวอร์}ที่ท้ายโจทย์) หากผู้เล่นกำลังอยู่ใน\textit{เมืองราก} เขาจะสามารถวาร์ปไปยัง…
+\begin{enumerate}
+
+\item \textit{เมืองราก}ของ \textit{server} อื่นๆ ในการวาร์ป $P$ วินาที หรือ
+\item แอเรียต่างๆ ใน\textit{เซิฟเวอร์}เดียวกันกับเมืองรากนั้นๆ ใช้เวลาในการวาร์ป $Q$ วินาที
+\end{enumerate}
+
+การวาร์ปนอกเหนือจากนี้ ที่มีจุดต้นทางเป็น\textit{เมืองราก}ใดๆ ไม่สามารถทำได้
+
+การเดินทางไปยังแอเรียต่างๆ ของ\textit{เซิฟเวอร์} มีอยู่เส้นทางเดียว คือผู้เล่นจะต้องวาร์ปจาก\textit{เมืองราก}ของ \textit{server}นั้นไปยังแอเรียนั้นโดยตรง เมื่อผู้เล่นกำลังออกจากแอเรียนั้น ผู้เล่นจะวาร์ปกลับมายังสู่\textit{เมืองราก}ของ \textit{server} อีกครั้งหนึ่ง
+
+หากคุณเป็นผู้เล่นคนหนึ่งในเกมนี้ และคุณต้องการเดินทางไปยัง $N$ สถานที่ ( อาจเป็น\textit{เมืองราก}หรือแอเรียก็ได้ ) ในลำดับใดๆก็ได้ โดยเมื่อคุณจะล็อกอินสู่เกม คุณสามารถเลือกได้ว่าจะเริ่มต้นที่\textit{เมืองราก}ของ \textit{Server}  ใดก็ได้ ซึ่งไม่นับว่าเป็นการวาร์ป แล้วเดินทางไปยังทุกสถานที่ที่ต้องการ จากนั้นจึงทำการล็อกเอาท์ (สามารถลอกเอาท์ได้ที่\textit{เมืองราก}เท่านั้น ไม่นับว่าเป็นการวารป์เช่นกัน)
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Server's Name & Root Town's Name\\
+\hline \hline
+$\Delta$ Delta & Eternal\_City\_Mac\_Anu\\
+\hline
+$\Omega$ Omega & Warring\_City\_Lumina\_Cloth\\
+\hline
+$\theta$ Theta & Celestial\_City\_Dol\_Dona\\
+\hline
+$\Sigma$ Sigma & Dual\_City\_Breg\_Epona\\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+\underline{\textbf{โจทย์}}  หน้าที่ของคุณคือเวลาที่ใช้ในการวาร์ปทั้งหมดในการเดินทางไปตามสถานที่ที่กำหนดให้ตามลำดับที่มีค่าน้อยที่สุดที่เป็นไปได้
+
+
+\InputFile
+
+\textbf{บรรทัดที่หนึ่ง} ระบุจำนวนเต็มบวก $N,P,Q$ คั่นด้วยช่องว่าง
+
+\textbf{บรรทัดที่ $2$ ถึง $N+1$} ในบรรทัดที่ $i+1$ ให้รับข้อมูลแอเรียที่ $i$ ประกอบด้วยสตริงสองชุด ชุดแรกเป็นชื่อเซิฟเวอร์ ชุดที่สองเป็นชื่อเมือง ประกอบด้วยตัวอักษรภาษาอังกฤษ หรือ “-“  “\_”  เท่านั้น
+
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว}  แสดงจำนวนเต็มจำนวนเดียว ระบุเวลาที่ใช้ในการเดินวาร์ปทั้งหมดที่น้อยที่สุด ตั้งเริ่มล็อกอินจนถึงการล็อกเอาท์ 
+
+\Examples
+
+\begin{example}
+\exmp{5 3 7
+Delta Hulle\_Granz\_Cathedral
+Sigma Dual\_City\_Breg\_Epona
+Sigma Land\_of\_Sins\_Ran\_Badhi
+Theta Coite-Bodher\_Batlefield
+Omega Warring\_City\_Lumina\_Cloth}{51}%
+\end{example}
+
+
+\Source
+
+พี่เพลน
+
+ศูนย์ สอวน. โรงเรียนมหิดลวิทยานุสรณ์
+
+\end{problem}
+
+\end{document}

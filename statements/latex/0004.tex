@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Character Checker}{standard input}{standard output}{1 second}{64 megabytes}
+
+\underline{\textbf{โจทย์}} ให้นักเรียนตรวจสอบว่า สายอักขระที่โจทย์กำหนดให้นี้ เป็นตัวอักษรพิมพ์เล็กทั้งหมด หรือตัวอักษรพิมพ์ใหญ่ทั้งหมด หรือมีทั้งตัวอักษรพิมพ์ใหญ่และพิมพ์เล็กผสมกันอยู่
+
+\InputFile
+
+\textbf{บรรทัดแรกเพียงบรรทัดเดียว} สายอักขระ ที่ประกอบไปด้วยตัวอักษร $'a' - 'z'$ หรือ $'A' - 'Z'$ เท่านั้น ความยาวไม่เกิน $10\,000$ ตัวอักษร
+
+\OutputFile
+
+ให้พิมพ์คำตอบตามเงื่อนไขต่อไปนี้
+\begin{itemize}
+
+    \item \textbf{ถ้าสายอักขระประกอบด้วยตัวพิมพ์ใหญ่ทั้งหมด} ให้พิมพ์ว่า "All Capital Letter" โดยไม่ต้องมีเครื่องหมาย ""
+    \item \textbf{ถ้าสายอักขระประกอบด้วยตัวพิมพ์เล็กทั้งหมด} ให้พิมพ์ว่า "All Small Letter" โดยไม่ต้องมีเครื่องหมาย ""
+    \item \textbf{ถ้าสายอักขระประกอบด้วยตัวอักษรพิมพ์เล็กและพิมพ์ใหญ่}ผสมกันไป ให้พิมพ์ว่า "Mix" โดยไม่ต้องมีเครื่องหมาย ""
+\end{itemize}
+
+\Examples
+
+\begin{example}
+\exmp{ABCDEFG}{All Capital Letter}%
+\exmp{abcdefg}{All Small Letter}%
+\exmp{AbCdEfG}{Mix}%
+\end{example}
+
+\end{problem}
+
+\end{document}

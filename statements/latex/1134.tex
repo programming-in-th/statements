@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{ลำดับ (sequence)}{standard input}{standard output}{0.3 second}{32 megabytes}
+
+ให้ $A, B, C, D, E, F, G, H$ เป็นจำนวนเต็มใดๆ เราจะนิยามลำดับ $a_1, a_2, a_3, …$ ดังนี้
+
+\begin{itemize}
+
+\item $a_1 = A$, $a_2 = B$, $a_3 = C$, $a_4 = D$
+\item $a_k = Ea_{k-1} + Fa_{k-2} + Ga_{k-3} + Ha_{k-4}$ สำหรับทุกจำนวนเต็ม $k \geq 5$
+\end{itemize}
+
+\bigskip
+\underline{\textbf{โจทย์}}  จงเขียนโปรแกรมเพื่อตอบคำถามทั้งหมด $Q$ คำถามว่า สำหรับแต่ละค่า $N$ เศษจากการหาร $a_N$ ด้วย $2\,553$ มีค่าเท่าไร
+
+
+\InputFile
+
+\textbf{บรรทัดแรก} ระบุจำนวนเต็ม $A, B, C, D, E, F, G$ และ $H$ ซึ่งแต่ละจำนวนจะมีค่าอยู่ในช่วงตั้งแต่ $0$ ถึง $1\,000$
+
+\textbf{บรรทัดที่สอง} ระบุจำนวนเต็ม $Q$ $(2 \leq Q \leq 200\,000)$ แทนจำนวนคำถามทั้งหมด
+
+\textbf{บรรทัดที่ $3$ ถึง $Q+2$} ในบรรทัดที่ $i+2$ $(1 \leq i \leq Q)$ จะระบุจำนวนเต็ม $N$ $(1 \leq N \leq 10^{18})$ แสดงถึงคำถามที่ $i$
+
+
+\OutputFile
+
+\textbf{มี $Q$ บรรทัด} โดยในบรรทัดที่ $i$ $(1 \leq i \leq Q)$ แสดงคำตอบของคำถามที่ $i$
+
+\Examples
+
+\begin{example}
+\exmp{1 2 3 4 2 3 0 0
+7
+1
+2
+3
+4
+5
+6
+7}{1
+2
+3
+4
+17
+46
+143}%
+\exmp{5 2 1 8 4 9 3 6
+8
+10
+20
+15
+1
+5
+4
+12
+15}{1127
+2306
+443
+5
+77
+8
+1598
+443}%
+\end{example}
+
+\Scoring
+
+\textbf{$20$\% ของข้อมูลทดสอบ:} $N \leq 1\,000\,000$ ในทุกคำถาม
+
+\textbf{$50$\% ของข้อมูลทดสอบ:} $G = H = 0$
+
+\textbf{$60$\% ของข้อมูลทดสอบ:} $Q \leq 2\,000$
+
+\Source
+
+สุธี เรืองวิเศษ
+
+การแข่งขัน IOI Thailand League เดือนตุลาคม 2553
+
+\end{problem}
+
+\end{document}

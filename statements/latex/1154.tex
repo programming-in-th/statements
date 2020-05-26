@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Longest Repeated Substring}{standard input}{standard output}{1 second}{32 megabytes}
+
+\bigskip
+\underline{\textbf{โจทย์}}  กำหนดค่า $M$ และสตริง $S$ งานของคุณคือหาว่า \textit{substring} ที่มีความยาวมากที่สุดซึ่งปรากฎใน $S$ ไม่น้อยกว่า $M$ ครั้ง มีความยาวเท่าไหร่
+
+
+\InputFile
+
+\textbf{บรรทัดแรก} ประกอบด้วยตัวเลข $2$ ตัว $N$ และ $M$ $( 1 \leq N \leq 15\,000; 2  \leq M \leq 20 )$
+
+\textbf{บรรทัดที่สอง} ประกอบด้วยสตริง $S$ ไม่มีช่องว่าง ความยาวเท่ากับ $N$
+
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} แสดงขนาดของ \textit{substring} ที่ยาวที่สุดตามเงือนไขในโจทย์
+
+\Examples
+
+\begin{example}
+\exmp{10 2
+oybjfoybjl}{4}%
+\exmp{10 5
+ohpjooooyc}{1}%
+\end{example}
+
+\Scoring
+
+\textbf{ข้อมูลนำเข้า $10$\%:} $N \leq 10$
+
+\textbf{ข้อมูลนำเข้า $30$\%:} $N \leq 100$
+
+\textbf{ข้อมูลนำเข้า $50$\%:} $N \leq 1,000$
+
+\textbf{ข้อมูลนำเข้า $70$\%:} $N \leq 10\,000$
+
+                
+\Source
+
+กสิ ชนพิมาย ($\sim$Kasi$\sim$)
+
+ศูนย์ สอวน. โรงเรียนมหิดลวิทยานุสรณ์
+
+\end{problem}
+
+\end{document}

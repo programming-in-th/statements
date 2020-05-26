@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../templates/style}
+
+\begin{document}
+
+\begin{problem}{Palindrome}{standard input}{standard output}{1 second}{64 megabytes}
+
+\textbf{พาลินโดรม\textit{ (palindrome)}} คือคำที่ใช้มีลำดับของอักขระเรียงกันจากซ้ายไปขวาและขวาไปซ้ายมายังตำแหน่งกึ่งกลางของคำนั้นอยู่ในลักษณะสมมาตรกัน ตัวอย่างของพาลินโดรมได้แก่ \textbf{ABA, ABBA, ABAABA, ABABABA}
+
+\textbf{พาลินโดรมชั้นสอง \textit{(double palindrome)}} คือพาลินโดรมซึ่งทั้งครึ่งแรกและครึ่งหลังของคำนั้นก็เป็นพาลินโดรมด้วย ดังนั้น \textbf{ABA, ABAABA, ABABABA} นอกจากจะเป็นพาลินโดรมแล้วก็ยังเป็นพาลินโดรมชั้นสองด้วย แต่คำว่า \textbf{ABBA} ไม่เป็นพาลินโดรมชั้นสองเนื่องจากว่าเมื่อแบ่งครึ่งแล้ว\textbf{ AB} และ\textbf{ BA} ไม่เป็นพาลินโดรมนั่นเอง
+
+กำหนดให้คำภาษาอังกฤษดังกล่าว ประกอบด้วยอักขระตัวใหญ่ \textit{(Capital letters)} จาก \textbf{A} ถึง \textbf{Z} หรืออักขระตัวเล็ก \textit{(Small letters)} จาก \textbf{a} ถึง \textbf{z} หรือตัวเลข\textbf{ 0-9} เท่านั้น และไม่มีช่องว่างภายในคำ ทั้งนี้ตัวอักขระที่เป็นตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็ก (เช่น \textbf{A} กับ \textbf{a} หรือ \textbf{B} กับ \textbf{b}) ถือเป็นตัวเดียวกัน
+
+\bigskip
+\underline{\textbf{โจทย์}}  จงเขียนโปรแกรมเพื่ออ่านคำหนึ่งคำให้บอกว่าคำนั้นเป็นพาลินโดรม พาลินโดรมชั้นสอง หรือไม่เป็นพาลินโดรม โดยถ้าเป็นพาลินโดรม(แต่ไม่เป็นพาลินโดรมชั้นสอง)ให้แสดงคำว่า Palindrome และถ้าเป็นพาลินโดรมชั้นสองให้แสดงคำว่า Double Palindrome และถ้าไม่เป็นทั้งสองแบบให้แสดงคำว่า No
+
+\InputFile
+
+\textbf{มีบรรทัดเดียว} รับสตริงคำที่มีความยาว $n$ โดยที่ $2 \leq n \leq 200$
+
+\OutputFile
+
+\textbf{มีบรรทัดเดียว} เป็นคำตอบว่าเป็นพาลินโดรมประเภทใดหรือไม่ใช่เลย ตามเงื่อนไขดังต่อไปนี้
+\begin{itemize}
+
+\item ถ้าข้อมูลนำเข้าเป็นพาลินโดรมให้แสดงคำว่า Palindrome
+\item ถ้าข้อมูลนำเข้าเป็นพาลินโดรมชั้นสองให้แสดงคำว่า Double Palindrome
+\item ถ้าข้อมูลนำเข้าเป็นไม่ใช่พาลินโดรมทั้งสองประเภทให้แสดงคำว่า No
+\end{itemize}
+
+\Examples
+
+\begin{example}
+\exmp{A72Bb27A}{Palindrome}%
+\exmp{aB3Ba5ab3BA}{Double Palindrome}%
+\exmp{aB4}{No}%
+\end{example}
+
+
+\Source
+
+การแข่งขันคณิตศาสตร์ วิทยาศาสตร์ โอลิมปิกแห่งประเทศไทย สาขาวิชาคอมพิวเตอร์ ประจำปี 2547
+
+\end{problem}
+
+\end{document}
