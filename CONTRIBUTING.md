@@ -1,8 +1,8 @@
 # Contributing
 
-วิธีการเพิ่มโจทย์เข้าระบบของเว็บ programming.in.th
+## วิธีการเพิ่มโจทย์เข้าระบบของเว็บ programming.in.th
 
-## Steps
+### Steps
 
 1. Fork repo statements
 2. สร้าง branch ใหม่ตามไอดีโจทย์ (สามารถดูวิธีตั้งไอดีได้ในข้อสาม)
@@ -53,3 +53,7 @@
 4. Compile latex โดยการรัน script `gen`
 5. ส่งอีเมลมาที่ prog.in.th@gmail.com โดยตั้งหัวข้อว่า Manifest & Test Cases for ชื่อโจทย์ (สามารถแนบไฟล์ได้ทาง Firefox Send หรืออื่น ๆ ใน format .zip)
 6. เปิด Pull Request มาที่ repo programming-in-th/statements โดยระบุชื่อโจทย์ เช่น Add A^B Problem
+
+
+
+สำหรับการแก้คำผิด หรือเนื้อหาของโจทย์ สามารถเปิด Pull Request มาที่ repo programming-in-th/statements ได้ทันที
