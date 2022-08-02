@@ -25,4 +25,4 @@ jobs:
 
       - name: Copy files to S3 with the s3cmd
         run: |
-            s3cmd sync --recursive --acl-public ./statements/pdf s3://proginth/statements
+            s3cmd sync --recursive --acl-public ./statements/pdf s3://proginth/statements/
