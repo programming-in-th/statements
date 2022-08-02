@@ -14,13 +14,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+      - name: Set up S3cmd cli tool
+        uses: s3-actions/s3cmd@v1.2.0
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-southeast-1
+          provider: digitalocean
+          region: 'sgp1'
+          access_key: ${{ secrets.S3_ACCESS_KEY }}
+          secret_key: ${{ secrets.S3_SECRET_KEY }}
 
-      - name: Copy files to S3 with the AWS CLI
+
+      - name: Copy files to S3 with the s3cmd
         run: |
-          aws s3 sync ./statements/pdf s3://beta-programming-in-th/statements --acl public-read
+            s3cmd sync --recursive --acl-public ./statements/pdf s3://proginth/statements
