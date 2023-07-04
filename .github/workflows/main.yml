@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  deploy1:
-    name: Upload to current Amazon S3
+  deploy_legacy:
+    name: Upload to legacy Amazon S3
     runs-on: ubuntu-latest
 
     steps:
@@ -25,9 +25,12 @@ jobs:
         run: |
           aws s3 sync ./statements/pdf s3://beta-programming-in-th/statements --acl public-read
 
-  deploy2:
-    name: Upload to next Amazon S3
+  deploy:
+    name: Upload to Digital Ocean S3
     runs-on: ubuntu-latest
+
+    env:
+      SPACE_NAME: prginth01
 
     steps:
       - name: Checkout
@@ -43,4 +46,4 @@ jobs:
 
       - name: Copy files to S3 with the s3cmd
         run: |
-          s3cmd sync --recursive --acl-public ./statements/pdf s3://proginth/statements/
+          s3cmd sync --recursive --acl-public ./statements/pdf s3://${{ env.SPACE_NAME }}/statements/
