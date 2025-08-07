@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# List of LaTeX packages to install
+PACKAGES=(
+  polyglossia
+  fontspec
+  geometry
+  listings
+  xcolor
+  soul
+  # graphicx
+  fancyhdr
+  # array
+  amsmath
+  amsfonts
+  fancyvrb
+  # verbatim
+  longfbox
+  setspace
+  titlesec
+  hyperref
+  # subcaption
+  caption
+  colortbl
+  options
+  pict2e
+  ellipse
+)
+
+echo "Installing LaTeX packages via tlmgr..."
+
+for pkg in "${PACKAGES[@]}"; do
+  echo "Installing: $pkg"
+  tlmgr install "$pkg"
+done
+
